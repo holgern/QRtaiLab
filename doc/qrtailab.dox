@@ -1,0 +1,26 @@
+/* -*- mode: C++ ; c-file-style: "stroustrup" -*- *****************************
+ * QRtaiLab
+ * Copyright (C) 2008   Holger Nahrstaedt
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the LGPL
+ *****************************************************************************/
+
+/*
+  This file contains NO source code, just some documentation for doxygen to
+  parse.
+*/
+
+/** @mainpage
+QRtaiLab is a QT-based port of the software scope xrtailab of the RTAI project. It can be used as virtual oscilloscope and monitoring 
+application for interacting with the real-time executable. More informations about RTAI can be found on the following website: 
+https://www.rtai.org.
+
+@section license License
+
+QRtaiLab is distributed under the terms of the LGPL V2.
+
+@section download Download
+
+Stable releases, prereleases and snapshots are available at the QRtaiLab project page.
+*/

@@ -1,0 +1,66 @@
+Version 0.1.12
+ - old mdi window layout can be choosen
+
+Version 0.1.11
+ - Log Bugfix removed
+ - Define Bug removed
+
+Version 0.1.10
+ - some bugfixes
+ - Log blocks can be used for xy plots (the columm size must be 2)
+ - different window behavior and layout
+
+Version 0.1.9
+ - command line options for scope/log save time and automatic saving from beginning
+ - some bugfixes
+ - works together with rtai 3.8.0 and older releases
+ - make install installs qrtailab to /usr/bin
+
+Version 0.1.8
+ - command line options like connect, load profile, etc are available
+ - Parameter values can saved and loaded 
+ - properties of the traces can be changed
+ - some bugfixes
+ - works only with rtai 3.8.0 and higher
+ - scopes works now with double
+
+Version 0.1.7
+ - offset in a scope  can now  be set to the average
+ - offset will be recalculated during changes of dy
+ - autoscaling in a scope is now possible
+ - Log blocks can be used for matrix plots (the size is very restricted!!! around 100-200 elements are possible)
+ - 3 different matrix plots 
+ - Meter options are displaying now to the actual meter options
+
+
+Version 0.1.6
+ - Color of TraceLabel is now correct
+ - file directory for saving can be entered
+ - plotting can be stopped for reducing cpu load.
+ - some new hints 
+ - more then one string can be entered for parameter hiding
+
+Version 0.1.5
+ - Parameter bug fixed
+ - Parameter Batch bug fixed
+
+Version 0.1.4
+ - Better structure of source code 
+ - MeterManager dialog improved 
+ - Parameters can be hide.
+ - Parameter values can be saved in a text file.
+
+Version 0.1.3
+- target stop button works correctly now
+- it is possible to decide if the scope thread runs in hard real time
+- log manager and scope manager shows progress bar during saving 
+- saving can be stoped
+
+Version 0.1.2
+- new connect dialog  
+- it is possible to reduce the data points in a scope to save cpu power (look for divider)  
+- works with QT 4.4 and KDE 4.1 
+
+
+Version 0.1.1
+- some bug fixes

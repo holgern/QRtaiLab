@@ -1,0 +1,44 @@
+Introduction
+============
+
+QRtailab uses qmake to build all its components .
+qmake is part of a Qt distribution.
+
+qmake reads project files, that contain the options and rules how to
+build a certain project. A project file ends with the suffix "*.pro".
+Files that end with the suffix "*.pri" are included by the project
+files and contain definitions, that are common for several project files.
+
+qrtailab.config is read by all project files of the Qwt package.
+So the first step is to edit qwtconfig.pri to adjust it to your
+needs.
+
+
+Requirements
+=============
+
+- rtai-kernel
+- rtai in /usr/realtime
+- Qt4
+- qwt
+
+Install
+=========
+1) The path to qwt and rtai has to be changed in qrtailab.config.
+2) If you use RTAI 3.7 or earlier uncomment the line: #DEFINES           += _RTAI_3_7_
+3) If you like the old mdi window layout uncomment the line: #DEFINES     += _OLD_LAYOUT_
+4) qmake-qt4 (only qt4 is supported)
+5) make
+6) sudo make install
+
+Use
+====
+1) load rtai modules
+2) generate an diagram with simulink or scicos and compile it.
+3) execute the programm
+4) Insteat of xrtailab, qrtailab can be used to connect to the realtime programm
+5) have fun!
+
+
+
+

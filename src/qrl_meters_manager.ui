@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QRL_MetersManager</class>
+ <widget class="QDialog" name="QRL_MetersManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>277</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>277</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>277</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Meters Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/icons/meter_icon.xpm</normaloff>:/icons/meter_icon.xpm</iconset>
+  </property>
+  <layout class="QGridLayout">
+   <item row="1" column="1">
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="helpButton">
+       <property name="text">
+        <string>Help</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>16</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text">
+        <string>Close Manager</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>16</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0" rowspan="2">
+    <widget class="QListWidget" name="meterListWidget">
+     <property name="baseSize">
+      <size>
+       <width>100</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Meter</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <item row="0" column="0" colspan="3">
+        <widget class="QCheckBox" name="showCheckBox">
+         <property name="text">
+          <string>Show/Hide</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="frameLabel">
+         <property name="text">
+          <string>Refresh rate</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QwtCounter" name="rrCounter">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="numButtons">
+          <number>1</number>
+         </property>
+         <property name="basicstep" stdset="0">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="minValue">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maxValue">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="minLabel">
+         <property name="text">
+          <string>Min:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <widget class="QwtCounter" name="minCounter">
+         <property name="numButtons">
+          <number>0</number>
+         </property>
+         <property name="basicstep" stdset="0">
+          <double>0.500000000000000</double>
+         </property>
+         <property name="minValue">
+          <double>-2147483647.000000000000000</double>
+         </property>
+         <property name="maxValue">
+          <double>2147483647.000000000000000</double>
+         </property>
+         <property name="stepButton1">
+          <number>10</number>
+         </property>
+         <property name="stepButton2">
+          <number>100</number>
+         </property>
+         <property name="stepButton3">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <double>-1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="maxLabel">
+         <property name="text">
+          <string>Max:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QwtCounter" name="maxCounter">
+         <property name="numButtons">
+          <number>0</number>
+         </property>
+         <property name="basicstep" stdset="0">
+          <double>0.500000000000000</double>
+         </property>
+         <property name="minValue">
+          <double>-2147483647.000000000000000</double>
+         </property>
+         <property name="maxValue">
+          <double>2147483647.000000000000000</double>
+         </property>
+         <property name="stepButton1">
+          <number>10</number>
+         </property>
+         <property name="stepButton2">
+          <number>100</number>
+         </property>
+         <property name="stepButton3">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="3">
+        <widget class="QComboBox" name="meterComboBox">
+         <item>
+          <property name="text">
+           <string>Thermo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Dial</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LCD</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="3">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>207</width>
+           <height>21</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="ThermoOptions">
+      <attribute name="title">
+       <string>Options</string>
+      </attribute>
+      <widget class="QPushButton" name="thermoColor1PushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>83</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BarColor</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="directionComboBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>72</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>vertical</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>horizontal</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>57</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>pipeWith</string>
+       </property>
+      </widget>
+      <widget class="QwtCounter" name="pipeWithCounter">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>90</y>
+         <width>74</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="numButtons">
+        <number>0</number>
+       </property>
+       <property name="basicstep" stdset="0">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="minValue">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="maxValue">
+        <double>1000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>14.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="thermoColor2PushButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>50</y>
+         <width>83</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BarColor</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="colorComboBox">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>121</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>LinearGradient</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Color</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="alarmCheckBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>83</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>alarm</string>
+       </property>
+      </widget>
+      <widget class="QwtCounter" name="alarmLevelCounter">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>120</y>
+         <width>74</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="numButtons">
+        <number>0</number>
+       </property>
+       <property name="basicstep" stdset="0">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="minValue">
+        <double>-1000000.000000000000000</double>
+       </property>
+       <property name="maxValue">
+        <double>1000000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>120</y>
+         <width>31</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>level</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="alarmThermoColor1PushButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>83</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BarColor</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="alarmThermoColor2PushButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>150</y>
+         <width>83</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BarColor</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="DialOptions">
+      <attribute name="title">
+       <string>Options</string>
+      </attribute>
+      <widget class="QPushButton" name="dialColorPushButton">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>50</y>
+         <width>111</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>needle color</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="LcdOptions">
+      <attribute name="title">
+       <string>Options</string>
+      </attribute>
+      <widget class="QPushButton" name="fontPushButton">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>100</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Change Fonts</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="formatComboBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string> e - exp. format</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>f - fixed format</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>g - mixed format</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>69</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Precision:</string>
+       </property>
+      </widget>
+      <widget class="QwtCounter" name="precisionCounter">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>50</y>
+         <width>84</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="numButtons">
+        <number>0</number>
+       </property>
+       <property name="basicstep" stdset="0">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="minValue">
+        <double>-1.000000000000000</double>
+       </property>
+       <property name="maxValue">
+        <double>100.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>4.000000000000000</double>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QwtCounter</class>
+   <extends>QWidget</extends>
+   <header>qwt_counter.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>meterListWidget</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pipeWithCounter</tabstop>
+  <tabstop>alarmLevelCounter</tabstop>
+  <tabstop>colorComboBox</tabstop>
+  <tabstop>thermoColor1PushButton</tabstop>
+  <tabstop>thermoColor2PushButton</tabstop>
+  <tabstop>alarmThermoColor1PushButton</tabstop>
+  <tabstop>alarmThermoColor2PushButton</tabstop>
+  <tabstop>directionComboBox</tabstop>
+  <tabstop>closeButton</tabstop>
+  <tabstop>alarmCheckBox</tabstop>
+  <tabstop>helpButton</tabstop>
+  <tabstop>minCounter</tabstop>
+  <tabstop>showCheckBox</tabstop>
+  <tabstop>rrCounter</tabstop>
+  <tabstop>maxCounter</tabstop>
+  <tabstop>meterComboBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QRL_MetersManager</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>326</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>250</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

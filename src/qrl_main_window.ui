@@ -1,0 +1,281 @@
+<ui version="4.0" >
+ <class>QRL_MainWindow</class>
+ <widget class="QMainWindow" name="QRL_MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="sizeIncrement" >
+   <size>
+    <width>50</width>
+    <height>30</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>QRtaiLab Graphical User Interface</string>
+  </property>
+  <property name="autoFillBackground" >
+   <bool>false</bool>
+  </property>
+  <property name="animated" >
+   <bool>false</bool>
+  </property>
+  <property name="dockOptions" >
+   <set>QMainWindow::ForceTabbedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralwidget" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuView" >
+    <property name="title" >
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionShowParameter" />
+    <addaction name="separator" />
+    <addaction name="actionShowScope" />
+    <addaction name="actionShowMeter" />
+    <addaction name="actionShowLed" />
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout_Qt" />
+    <addaction name="actionAbout_QRtaiLab" />
+   </widget>
+   <widget class="QMenu" name="menuTarget" >
+    <property name="title" >
+     <string>&amp;Target</string>
+    </property>
+    <addaction name="actionStartTarget" />
+    <addaction name="actionConnect" />
+    <addaction name="actionDisconnect" />
+    <addaction name="separator" />
+    <addaction name="actionStart" />
+    <addaction name="actionStop" />
+   </widget>
+   <widget class="QMenu" name="menuProject" >
+    <property name="title" >
+     <string>Project</string>
+    </property>
+    <addaction name="actionLoadProfile" />
+    <addaction name="actionSaveProfile" />
+    <addaction name="actionDeleteProfile" />
+    <addaction name="actionExit" />
+   </widget>
+   <addaction name="menuProject" />
+   <addaction name="menuTarget" />
+   <addaction name="menuView" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <widget class="QToolBar" name="toolBar" >
+   <property name="minimumSize" >
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="sizeIncrement" >
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionExit" />
+   <addaction name="separator" />
+   <addaction name="actionStartTarget" />
+   <addaction name="actionConnect" />
+   <addaction name="actionDisconnect" />
+   <addaction name="separator" />
+   <addaction name="actionLoadProfile" />
+   <addaction name="actionSaveProfile" />
+   <addaction name="actionDeleteProfile" />
+   <addaction name="separator" />
+   <addaction name="actionStart" />
+   <addaction name="actionStop" />
+   <addaction name="separator" />
+   <addaction name="actionShowParameter" />
+   <addaction name="separator" />
+   <addaction name="actionShowScope" />
+   <addaction name="actionShowMeter" />
+   <addaction name="actionShowLed" />
+   <addaction name="actionShowLog" />
+  </widget>
+  <action name="actionConnect" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/connect_icon.xpm</normaloff>:/icons/connect_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionAbout_QRtaiLab" >
+   <property name="text" >
+    <string>About QRtaiLab</string>
+   </property>
+  </action>
+  <action name="actionDisconnect" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/disconnect_icon.xpm</normaloff>:/icons/disconnect_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Disconnect</string>
+   </property>
+  </action>
+  <action name="actionExit" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/exit_icon.xpm</normaloff>:/icons/exit_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionStart" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/start_icon.xpm</normaloff>:/icons/start_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionStop" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/stop_icon.xpm</normaloff>:/icons/stop_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionShowMeter" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/meter_icon.xpm</normaloff>:/icons/meter_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Meter</string>
+   </property>
+  </action>
+  <action name="actionShowScope" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/scope_icon.xpm</normaloff>:/icons/scope_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Scope</string>
+   </property>
+  </action>
+  <action name="actionShowLed" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/led_icon.xpm</normaloff>:/icons/led_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Led</string>
+   </property>
+  </action>
+  <action name="actionShowParameter" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/parameters_icon.xpm</normaloff>:/icons/parameters_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Parameter</string>
+   </property>
+  </action>
+  <action name="actionLoadProfile" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/connect_profile_icon.xpm</normaloff>:/icons/connect_profile_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Load Profile</string>
+   </property>
+  </action>
+  <action name="actionSaveProfile" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/save_profile_icon.xpm</normaloff>:/icons/save_profile_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Save Profile</string>
+   </property>
+  </action>
+  <action name="actionDeleteProfile" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/del_profile_icon.xpm</normaloff>:/icons/del_profile_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Delete Profile</string>
+   </property>
+  </action>
+  <action name="actionStartTarget" >
+   <property name="checkable" >
+    <bool>false</bool>
+   </property>
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/session_open_icon.xpm</normaloff>:/icons/session_open_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Target Manager</string>
+   </property>
+  </action>
+  <action name="actionShowLog" >
+   <property name="icon" >
+    <iconset resource="qrtailab.qrc" >
+     <normaloff>:/icons/log_icon.xpm</normaloff>:/icons/log_icon.xpm</iconset>
+   </property>
+   <property name="text" >
+    <string>Log</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt" >
+   <property name="text" >
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="qrtailab.qrc" />
+ </resources>
+ <connections/>
+</ui>

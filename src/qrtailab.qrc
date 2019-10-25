@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/icons" >
+        <file alias="auto_lob_icon.xpm">icons/auto_log_icon.xpm</file>
+        <file alias="block_icon.xpm">icons/block_icon.xpm</file>
+        <file alias="connect_icon.xpm">icons/connect_icon.xpm</file>
+        <file alias="connect_profile_icon.xpm">icons/connect_profile_icon.xpm</file>
+        <file alias="connect_wprofile_icon.xpm">icons/connect_wprofile_icon.xpm</file>
+        <file alias="del_profile_icon.xpm">icons/del_profile_icon.xpm</file>
+        <file alias="disconnect_icon.xpm">icons/disconnect_icon.xpm</file>
+        <file alias="exit_icon.xpm">icons/exit_icon.xpm</file>
+        <file alias="folder_asmall.xpm">icons/folder_asmall.xpm</file>
+        <file alias="folder_small.xpm">icons/folder_small.xpm</file>
+        <file alias="led_icon.xpm">icons/led_icon.xpm</file>
+        <file alias="log_icon.xpm">icons/log_icon.xpm</file>
+        <file alias="meter_icon.xpm">icons/meter_icon.xpm</file>
+        <file alias="parameters_icon.xpm">icons/parameters_icon.xpm</file>
+        <file alias="profile_icon.xpm">icons/profile_icon.xpm</file>
+        <file alias="save_profile_icon.xpm">icons/save_profile_icon.xpm</file>
+        <file alias="scope_icon.xpm">icons/scope_icon.xpm</file>
+        <file alias="session_open_icon.xpm">icons/session_open_icon.xpm</file>
+        <file alias="session_save_icon.xpm">icons/session_save_icon.xpm</file>
+        <file alias="start_icon.xpm">icons/start_icon.xpm</file>
+        <file alias="stop_icon.xpm">icons/stop_icon.xpm</file>
+        <file alias="synchronoscope_icon.xpm">icons/synchronoscope_icon.xpm</file>
+    </qresource>
+</RCC>

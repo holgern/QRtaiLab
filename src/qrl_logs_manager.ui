@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QRL_LogsManager</class>
+ <widget class="QDialog" name="QRL_LogsManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>380</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>380</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Logs Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="qrtailab.qrc">
+    <normaloff>:/icons/log_icon.xpm</normaloff>:/icons/log_icon.xpm</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="1" column="0" colspan="3">
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="helpButton">
+       <property name="text">
+        <string>Help</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>16</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text">
+        <string>Close Manager</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>16</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="QListWidget" name="logListWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>100</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Log">
+      <attribute name="title">
+       <string>Log</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="showCheckBox">
+         <property name="text">
+          <string>Show/Hide</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QCheckBox" name="holdCheckBox">
+         <property name="toolTip">
+          <string>stop plotting will reduce cpu load. Saving is still possible!</string>
+         </property>
+         <property name="text">
+          <string>hold Plot</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="3">
+        <widget class="QToolBox" name="toolBox">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>286</width>
+            <height>199</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Saving</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Directory</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="dirPushButton">
+             <property name="toolTip">
+              <string>set directory for saving</string>
+             </property>
+             <property name="text">
+              <string>Set Dir</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QLineEdit" name="dirLineEdit">
+             <property name="toolTip">
+              <string>Directory in which the file will be saved</string>
+             </property>
+             <property name="text">
+              <string>./</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Filename</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="fileLineEdit">
+             <property name="toolTip">
+              <string>Filename</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Time [s]:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QwtCounter" name="timeCounter">
+             <property name="toolTip">
+              <string>Time duration of the next saving</string>
+             </property>
+             <property name="numButtons">
+              <number>0</number>
+             </property>
+             <property name="minValue">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maxValue">
+              <double>1000000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QProgressBar" name="saveProgressBar">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="textVisible">
+              <bool>true</bool>
+             </property>
+             <property name="format">
+              <string>%p%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="savePushButton">
+             <property name="toolTip">
+              <string>start saving</string>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="stopPushButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>stop saving</string>
+             </property>
+             <property name="text">
+              <string>stop</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QComboBox" name="viewComboBox">
+         <item>
+          <property name="text">
+           <string>Matrix view</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>x-y plot</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QwtCounter" name="rrCounter">
+         <property name="numButtons">
+          <number>1</number>
+         </property>
+         <property name="basicstep" stdset="0">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maxValue">
+          <double>150.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>10.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>FPS:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="matrixView">
+      <attribute name="title">
+       <string>Matrix View Options</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="rowDimLineEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="colDimLineEdit">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QComboBox" name="delegateComboBox">
+         <item>
+          <property name="text">
+           <string>Colorbar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Black/White</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pixel</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Fullscale from:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" rowspan="6" colspan="3">
+        <widget class="QTableView" name="legendTableView"/>
+       </item>
+       <item row="7" column="3">
+        <widget class="QSpinBox" name="pixelSizeSpinBox">
+         <property name="maximum">
+          <number>500</number>
+         </property>
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Cell size (px):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>21</width>
+           <height>25</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Matrix Dim (row x col):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QwtCounter" name="minScaleCounter">
+         <property name="numButtons">
+          <number>0</number>
+         </property>
+         <property name="basicstep" stdset="0">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="minValue">
+          <double>-10000000.000000000000000</double>
+         </property>
+         <property name="maxValue">
+          <double>10000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>to</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QwtCounter" name="maxScaleCounter">
+         <property name="numButtons">
+          <number>0</number>
+         </property>
+         <property name="basicstep" stdset="0">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="minValue">
+          <double>-10000000.000000000000000</double>
+         </property>
+         <property name="maxValue">
+          <double>10000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QCheckBox" name="viewNumberCheckBox">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>View Cell Number</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="xyPlot">
+      <attribute name="title">
+       <string>X-Y Plot Options</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Hist length</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QwtCounter" name="histLengthDistCounter">
+           <property name="numButtons">
+            <number>0</number>
+           </property>
+           <property name="basicstep" stdset="0">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="maxValue">
+            <double>1000000000.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>100.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Point distance</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QwtCounter" name="pointDistCounter">
+           <property name="numButtons">
+            <number>0</number>
+           </property>
+           <property name="basicstep" stdset="0">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="maxValue">
+            <double>1000000000.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>100.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>dx</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="dxComboBox">
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <property name="currentIndex">
+            <number>6</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>0.005</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.01</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.05</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>100</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>offset x</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QwtCounter" name="xOffsetCounter">
+           <property name="numButtons">
+            <number>0</number>
+           </property>
+           <property name="minValue">
+            <double>-100000000.000000000000000</double>
+           </property>
+           <property name="maxValue">
+            <double>100000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>dy</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="dyComboBox">
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <property name="currentIndex">
+            <number>6</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>0.005</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.01</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.05</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>100</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>offset y</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QwtCounter" name="yOffsetCounter">
+           <property name="numButtons">
+            <number>0</number>
+           </property>
+           <property name="minValue">
+            <double>-100000000.000000000000000</double>
+           </property>
+           <property name="maxValue">
+            <double>100000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QwtCounter</class>
+   <extends>QWidget</extends>
+   <header>qwt_counter.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="qrtailab.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QRL_LogsManager</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>394</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

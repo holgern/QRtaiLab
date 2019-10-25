@@ -1,0 +1,28 @@
+The QRTAILAB - User Interface for RTAI
+-------------------------------------
+
+	QRtaiLab is a QT-based port of the software scope xrtailab 
+	of the RTAI project. It can be used as virtual oscilloscope and 
+	monitoring application for interacting with the real-time 
+	executable. More informations about RTAI on https://www.rtai.org.
+        
+	QRtaiLab is hosted at http://qrtailab.sf.net
+
+Installation
+------------
+
+      Read INSTALL how to build and install QRtaiLab.
+
+Copyright
+---------
+
+    QRtaiLab
+    Copyright (C) 2008  Holger Nahrstaedt
+
+    QRtaiLab is published under the GPL License, Version 2.0.
+    You should have received a copy of this licence in the file
+    COPYING.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
